@@ -1,0 +1,40 @@
+{
+  "name": "bitfolio-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_PATH=src nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cli-progress": "^3.9.0",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "lusca": "^1.7.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.1.1",
+    "typeorm": "^0.2.31",
+    "typescript": "^4.2.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/cli-progress": "^3.9.0",
+    "@types/compression": "^1.7.0",
+    "@types/express": "^4.17.11",
+    "@types/express-session": "^1.17.3",
+    "@types/lusca": "^1.7.0",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^14.14.31",
+    "nodemon": "^2.0.7"
+  }
+}
