@@ -3,17 +3,23 @@
     "lib": [
       "es5",
       "es6"
-   ],
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "/*": [
+        "src/*",
+      ]
+    },
     "target": "es5",                      
     "module": "commonjs",                        
     "strict": true,   
+    "strictPropertyInitialization": false,
     "esModuleInterop": true, 
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "skipLibCheck": true,                        
     "forceConsistentCasingInFileNames": true,       
     "outDir": "./build",
-    "baseUrl": "src",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true
