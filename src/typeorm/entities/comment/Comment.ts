@@ -2,14 +2,10 @@ import {
   Entity, 
   PrimaryGeneratedColumn, 
   Column, 
-  CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
-  OneToOne,
   ManyToOne,
   JoinColumn
 } from 'typeorm';
-import { Post } from './Post';
+import { Post } from '../post/Post';
 
 
 @Entity()
@@ -28,15 +24,6 @@ export class Comment {
 
   @Column()
   seq: string;
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
-
-  @DeleteDateColumn()
-  deletedAt: Date;
 
   @ManyToOne(() => Post, post => post.comments)
   @JoinColumn()

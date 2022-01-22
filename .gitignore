@@ -1,4 +1,6 @@
 ormconfig.json
 node_modules
+
 .env
-debug.log
+
+logs

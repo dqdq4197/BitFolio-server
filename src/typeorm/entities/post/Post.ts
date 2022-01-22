@@ -2,18 +2,13 @@ import {
   Entity, 
   PrimaryGeneratedColumn, 
   Column, 
-  CreateDateColumn,
-  UpdateDateColumn,
-  DeleteDateColumn,
   ManyToOne,
   OneToMany,
   JoinColumn,
-  RelationId
 } from 'typeorm';
-import { User } from './User';
-import { Comment } from './Comment';
-import { P_like } from './P_like';
-
+import { User } from '../user/User';
+import { Comment } from '../comment/Comment';
+import { P_like } from '../p_like/P_like';
 
 @Entity()
 export class Post {
@@ -29,15 +24,6 @@ export class Post {
   @Column("text")
   content: string;
 
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @UpdateDateColumn()
-  updatedAt: Date;
-
-  @DeleteDateColumn()
-  deletedAt: Date;
-  
   @ManyToOne(() => User, user => user.posts)
   @JoinColumn()
   user: User;

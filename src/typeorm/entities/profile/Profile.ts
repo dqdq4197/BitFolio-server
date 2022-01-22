@@ -6,8 +6,7 @@ import {
   OneToOne,
   JoinColumn
 } from 'typeorm';
-import { User } from './User';
-
+import { User } from '../user/User';
 
 @Entity()
 export class Profile {
@@ -17,10 +16,13 @@ export class Profile {
   @Column()
   name: string;
 
+  @Column()
+  picture: string;
+
   @UpdateDateColumn()
-  updatedAt: Date
+  updatedAt: Date;
 
   @OneToOne(() => User, user => user.profile)
   @JoinColumn()
-  user: User
+  user: User;
 }

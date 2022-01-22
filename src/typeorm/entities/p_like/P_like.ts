@@ -2,13 +2,10 @@ import {
   Entity, 
   PrimaryGeneratedColumn, 
   Column, 
-  CreateDateColumn,
-  DeleteDateColumn,
-  OneToOne,
   ManyToOne,
   JoinColumn
 } from 'typeorm';
-import { Post } from './Post';
+import { Post } from '../post/Post';
 
 
 @Entity()
@@ -18,12 +15,6 @@ export class P_like {
 
   @Column({ unique: true })
   userId: string;
-
-  @CreateDateColumn()
-  createdAt: Date;
-
-  @DeleteDateColumn()
-  deletedAt: Date;
 
   @ManyToOne(() => Post, post => post.p_likes)
   @JoinColumn()
